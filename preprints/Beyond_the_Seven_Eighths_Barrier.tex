@@ -1,7 +1,5 @@
-\documentclass[10pt,oneside,notitlepage,a4paper]{book}
-\usepackage[no-math]{fontspec}
-\setmainfont{Times New Roman}
-\setmonofont{Consolas}
+\documentclass[10pt,reqno,a4paper]{amsart}
+\usepackage{newtxtext}
 \usepackage{amsmath,amsfonts,amssymb,amsthm}
 \usepackage[xcharter,nosymbolsc]{newtxmath}
 \DeclareMathSizes{11}{11}{9}{7}
@@ -13,19 +11,22 @@
 \usepackage[hidelinks]{hyperref}
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\theequation}{\arabic{equation}}
-\renewcommand{\bibname}{References}
-\pagestyle{plain}
-\newenvironment{abstract}
-  {\begin{quote}\small\textbf{Abstract.}\ }
-  {\end{quote}}
-\setlength{\textwidth}{155mm}
-\setlength{\textheight}{235mm}
-\setlength{\oddsidemargin}{2mm}
-\setlength{\evensidemargin}{2mm}
-\setlength{\topmargin}{-8mm}
-\setlength{\parskip}{0.25em}
-\linespread{1.08}
+\setlength{\textwidth}{150mm}
+\setlength{\textheight}{230mm}
+\calclayout
+\setlength{\parskip}{0pt}
+\linespread{1.0}
 \allowdisplaybreaks[2]
+\makeatletter
+\renewcommand{\@settitle}{%
+  \begin{center}\normalfont\normalsize\bfseries
+    \MakeUppercase{\@title}\par
+  \end{center}}
+\renewcommand{\@setauthors}{%
+  \begin{center}\normalfont\footnotesize\scshape
+    \authors\par
+  \end{center}}
+\makeatother
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
@@ -39,14 +40,12 @@
 \newcommand{\OO}{\mathcal O_F}
 \newcommand{\st}{\sigma_\tau}
 \newcommand{\bp}{\beta_*}
-\title{Beyond the Seven-Eighths Barrier:\\[0.2em] A Sharper Quasi-Riemann Boundary}
+\title[Beyond the Seven-Eighths Barrier]{Beyond the Seven-Eighths Barrier:\\[0.2em] A Sharper Quasi-Riemann Boundary}
 \author{Argonaut Math}
 \date{October 7, 2026}
 
 \begin{document}
-\fontsize{11}{15}\selectfont
 \maketitle
-\fontsize{11}{15}\selectfont
 
 \begin{abstract}
 We refine the zero-free boundary in OpenAI's September 30 quasi-Riemann
@@ -66,15 +65,9 @@ theorems are taken from the original paper; no new short mean-square
 assumption is imposed.
 \end{abstract}
 
-\section{The boundary and the perturbation}
+\section{Introduction}\label{sec-introduction}
 
-This paper refines the parameters in OpenAI's September 30 argument
-as part of the Argonaut Math research program. That argument proves a
-zero-free half-plane with boundary $7/8$. It uses a finite arithmetic
-probe with two representations: one admits a sieve estimate, and the other
-produces an analytic signal. We show that the construction permits a small
-increase in the length of the compensation primes. Adjusting the column
-scales to accommodate that increase gives a strictly smaller boundary.
+\subsection{Historical background and main result}
 
 Riemann's 1859 paper connected the distribution of primes to the zeta
 function through analytic continuation and a functional equation. Its
@@ -83,6 +76,14 @@ bears his name
 \cite[English translation, pp.~2--4]{riemann1859}. The present argument
 concerns a zero-free half-plane for a family of $L$-functions; it does not
 reach the critical line.
+
+This paper refines the parameters in OpenAI's September 30 argument
+as part of the Argonaut Math research program. That argument proves a
+zero-free half-plane with boundary $7/8$. It uses a finite arithmetic
+probe with two representations: one admits a sieve estimate, and the other
+produces an analytic signal. We show that the construction permits a small
+increase in the length of the compensation primes. Adjusting the column
+scales to accommodate that increase gives a strictly smaller boundary.
 
 We work over $F=\mathbb Q(\sqrt{-3})$, with ring of integers $\OO$ and ideal
 norm $\N\mathfrak a=|\OO/\mathfrak a|$. A finite-order Hecke character
@@ -171,6 +172,8 @@ Thus the fixed value $\kappa=3/4$ is admissible in Lemma~18.1 of
 \cite{q30}, whose uniform range is $\kappa\in[3/4,1]$. This choice uses
 the existing bound, which is available before we perturb the parameters.
 
+\subsection{Outline of the proof}
+
 The proof compares two estimates for the same finite arithmetic probe.
 The low-side estimate bounds its size by reflected-row energy and an
 additive Gram bound. The rescaling coefficients absorb the cost of the
@@ -189,6 +192,39 @@ the principal signal and bounds the outer rows. Section~\ref{sec-assembly}
 then chooses the parameters without circular dependence and combines the
 two estimates needed by the continuation principle to exclude the gap
 $\Delta_\tau$.
+
+Three points have to remain compatible throughout the perturbation.
+Both estimates concern the same finite probe, including its phases and
+coprimality restrictions. In the analytic representation, the complete
+Euler correction is moved before the retained integral is subdivided by
+amplitude, and the numerator is estimated jointly with every error slot.
+The resulting estimates bound the normalized probe and its difference
+from the principal signal, respectively; the low-side bound is established
+in Section~\ref{sec-low}. Finally, the moment mesh is fixed first, then
+the number of prime slots, and then the principal approximation saving.
+The height and external decay orders are chosen only after the earlier
+real savings. The proof below supplies these checks at the altered lengths.
+
+\subsection{AI disclosure}
+
+AI assistance was used in developing the argument. The AI for Math
+plugin supported code generation for the computations and Lean formalization.
+The mathematical content of the paper is the deduction from the stated
+literature inputs; the collaboration does not enlarge those inputs or the
+theorem's scope.
+
+The formalization of the three terminal nonvanishing statements---for
+the Riemann zeta function, Dirichlet L-functions, and the Hecke family
+considered here---is complete. It uses the imported foundational results
+from the original project and retains the stated strict half-plane and
+the applicable principal-pole exceptions. It has passed compilation
+with Lean~4.34.1 and verification with Comparator's native core.
+
+\subsection{Acknowledgements}
+
+This work developed through human--AI dialogue. Human questions and
+hints guided the choice of the small parameter perturbation and the
+requirement that both estimates concern the same finite probe.
 
 \section{One finite probe and its Euler representation}\label{sec-probe}
 
@@ -1668,21 +1704,6 @@ reach the critical line. Broader arithmetic questions, including
 Hilbert's twelfth problem, are longer-term aspirations for the
 program; this argument claims no progress on that problem.
 \end{remark}
-
-\section*{AI Closure}
-
-This work developed through human--AI dialogue. Human questions and
-hints guided the choice of the small parameter perturbation and the
-requirement that both estimates concern the same finite probe.
-AI assistance helped develop and explain the argument. The AI for Math
-plugin supported code generation for the computations and Lean formalization.
-The mathematical content of the paper is the deduction above
-from the stated literature inputs; the collaboration does not
-enlarge those inputs or the theorem's scope.
-
-The Lean formalization of the three terminal statements has
-passed compilation with Lean~4.34.1 and verification with
-Comparator's native core.
 
 \begin{thebibliography}{9}
 
