@@ -7,4 +7,4 @@
 | Research announcement | [ANNOUNCEMENT.md](ANNOUNCEMENT.md) |
 | Upstream repository license | [LICENSE](LICENSE) |
 
-The [v0.1.7 release](https://github.com/Argonaut-Math/argonaut-math-quasi-riemann-boundary/releases/tag/v0.1.7) pairs the manuscript with the complete Lean formalization package.
+The [v0.1.8 release](https://github.com/Argonaut-Math/argonaut-math-quasi-riemann-boundary/releases/tag/v0.1.8) pairs the manuscript with the complete Lean formalization package.

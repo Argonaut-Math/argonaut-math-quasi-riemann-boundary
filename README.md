@@ -10,7 +10,7 @@ This repository contains the manuscript and Lean formalization of a refinement o
 
 - [Paper and citation](preprints/README.md)
 - [Lean formalization](lean/README.md)
-- [Complete release package](https://github.com/Argonaut-Math/argonaut-math-quasi-riemann-boundary/releases/tag/v0.1.7)
+- [Complete release package](https://github.com/Argonaut-Math/argonaut-math-quasi-riemann-boundary/releases/tag/v0.1.8)
 - [Contents](CONTENTS.md)
 
 The formalization has passed **Lean 4.34.1 compilation** and **native Comparator verification**.
