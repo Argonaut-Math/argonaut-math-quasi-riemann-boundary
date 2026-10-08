@@ -14,6 +14,6 @@
   title = {Beyond the Seven-Eighths Barrier: A Sharper Quasi-Riemann Boundary},
   year = {2026},
   howpublished = {Argonaut Math preprint},
-  url = {https://github.com/Argonaut-Math/argonaut-math-quasi-riemann-boundary/releases/tag/v0.1.6}
+  url = {https://github.com/Argonaut-Math/argonaut-math-quasi-riemann-boundary/releases/tag/v0.1.7}
 }
 ```
