@@ -2,9 +2,11 @@
 
 **October 8, 2026**
 
+Within just **40 hours** of OpenAI's announcement, according to the Argonaut Math team's development timeline, Argonaut Math developed a proposed improvement to OpenAI's Quasi-Riemann Hypothesis result.
+
 On October 6, 2026, OpenAI unveiled hundreds of mathematical manuscripts spanning 372 result families, marking a remarkable milestone in AI-assisted mathematical research.[1]
 
-Within just 40 hours of this landmark announcement, according to the Argonaut Math team's development timeline, Argonaut Math developed a proposed improvement to OpenAI's Quasi-Riemann Hypothesis result. The proposed refinement lowers the zero-free threshold from 7/8 to
+The proposed refinement lowers the zero-free threshold from 7/8 to
 
 $$
 \frac78-\frac1{4000000}=0.87499975,
