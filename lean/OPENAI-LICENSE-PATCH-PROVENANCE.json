@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "official_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "upstream_repository_license_path": "LICENSE",
+  "upstream_license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+  "compatibility_patches_exact_git_blobs": [
+    {
+      "upstream_git_path": "lean/patches/AINTLIB-lean4341.patch",
+      "archive_path": "project/patches/AINTLIB-lean4341.patch",
+      "sha256": "076bee4cee068ad938e611d266bb32f7f1798189336087e88c08c8b3ac58dff1",
+      "bytes": 1332380,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/AbsorptionCutoff-lean4341.patch",
+      "archive_path": "project/patches/AbsorptionCutoff-lean4341.patch",
+      "sha256": "8b35104dc12f807f594f7a61f7a183d967edcd0e601c7172e0e851e4c3adb3ba",
+      "bytes": 5131,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/ClassFieldTheory-lean4341.patch",
+      "archive_path": "project/patches/ClassFieldTheory-lean4341.patch",
+      "sha256": "0275686e2febd9c14523a94cbfae105e6cf30997ed0b2a1ea28c84d0d0c12ba5",
+      "bytes": 1319196,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/PrimeNumberTheoremAnd-lean4341.patch",
+      "archive_path": "project/patches/PrimeNumberTheoremAnd-lean4341.patch",
+      "sha256": "0890432340c0025973bcfe070b634355fa366cc831595f68526e4c73c8903d82",
+      "bytes": 1993197,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/SphereEversion-lean4341.patch",
+      "archive_path": "project/patches/SphereEversion-lean4341.patch",
+      "sha256": "5c7c8dba85e4636ed2fec14a5765e937f2b1c428eadb12168645b9d2c0046098",
+      "bytes": 539,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/StrongPNT-lean4341.patch",
+      "archive_path": "project/patches/StrongPNT-lean4341.patch",
+      "sha256": "2cac5cbef22987314f9293bebcf243d0a3341caaf0227925d1f8d4c31be924d7",
+      "bytes": 1248207,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/Zeta3Irrational-lean4341.patch",
+      "archive_path": "project/patches/Zeta3Irrational-lean4341.patch",
+      "sha256": "169eb72e9d12740688467a0e6abf63923a60ec5f7ce8f49ca4b3684a22418901",
+      "bytes": 169130,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/belyi-lean4341.patch",
+      "archive_path": "project/patches/belyi-lean4341.patch",
+      "sha256": "f54c2e211464c0f8194ce63a80a6562489f23f688b1c233efe3c2debfc1b9f66",
+      "bytes": 18708,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/carleson-lean4341.patch",
+      "archive_path": "project/patches/carleson-lean4341.patch",
+      "sha256": "8aa67adaeb6ef56967aa78c47a6c743f03ac72c125f503219a72dee5be23168c",
+      "bytes": 233447,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/elliptic-curves-lean4341.patch",
+      "archive_path": "project/patches/elliptic-curves-lean4341.patch",
+      "sha256": "69e6575dae5797d43242694dc737b400b3e1e8fcb854094fead2a204a1f58632",
+      "bytes": 37979,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/fixed-point-theorems-lean4341.patch",
+      "archive_path": "project/patches/fixed-point-theorems-lean4341.patch",
+      "sha256": "d70872e41e80b25191538d1659c4aa3a001349b5bd16f806c9e3833a502516e5",
+      "bytes": 23143,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/formal-schemes-lean4341.patch",
+      "archive_path": "project/patches/formal-schemes-lean4341.patch",
+      "sha256": "5376716aa94fe0c6907570d650dd6604f170687c218cea7028d09b9f95877cea",
+      "bytes": 7995,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/genl-lean4341.patch",
+      "archive_path": "project/patches/genl-lean4341.patch",
+      "sha256": "3a9edd7dd539e98f81145a3b6cc980c9d62a821b7d41e2591f9aa5c557a7b6fa",
+      "bytes": 6516,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/gromov-lean4341.patch",
+      "archive_path": "project/patches/gromov-lean4341.patch",
+      "sha256": "26a1924bef774183a2e0865f144b782dc1f78eb0246993a31a5d63193b7781bb",
+      "bytes": 679242,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/heights-lean4341.patch",
+      "archive_path": "project/patches/heights-lean4341.patch",
+      "sha256": "bd3b58a301df273a199d9a0fe486b25d194df176afe32583289d42b64ab583a3",
+      "bytes": 22638,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/iut-lean4341.patch",
+      "archive_path": "project/patches/iut-lean4341.patch",
+      "sha256": "610ef069f7de5a5d500ead287287b60f193269ea4ddc0011101a9c7c98356dd4",
+      "bytes": 55593,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/oka-lean4341.patch",
+      "archive_path": "project/patches/oka-lean4341.patch",
+      "sha256": "02995b860e7d566a10adc3488439d38abc06dcb317ae4576d504c71c921816e7",
+      "bytes": 117028,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/orbicurve-cores-lean4341.patch",
+      "archive_path": "project/patches/orbicurve-cores-lean4341.patch",
+      "sha256": "4376110b9b7c823057cda21479a45de688c5138c81e5d4f1c050b632f168b93d",
+      "bytes": 37139,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/pi1-lean4341.patch",
+      "archive_path": "project/patches/pi1-lean4341.patch",
+      "sha256": "816e0d8123d5622c5b3415675638053ae31126a829e4f21d96f7af28db292f5f",
+      "bytes": 21899,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/rellich-kondrachov-lean4341.patch",
+      "archive_path": "project/patches/rellich-kondrachov-lean4341.patch",
+      "sha256": "0c121d8517dfeadc93ef24fe2deb56beec7cb3998e2552dee8f61c780b1408c8",
+      "bytes": 147331,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/schoenflies-lean-lean4341.patch",
+      "archive_path": "project/patches/schoenflies-lean-lean4341.patch",
+      "sha256": "4cbc255a2be785e6b617ecd61cdaf67e6d236d65a87f284380f2713670c8e350",
+      "bytes": 126127,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/tate-curves-theta-lean4341.patch",
+      "archive_path": "project/patches/tate-curves-theta-lean4341.patch",
+      "sha256": "885a19a0dc2d004aaece1987e2b7d2ff4745aef8881cbc53971a852cc5644c3f",
+      "bytes": 4905,
+      "exact_git_blob_match": true
+    },
+    {
+      "upstream_git_path": "lean/patches/tempered-fundamental-groups-lean4341.patch",
+      "archive_path": "project/patches/tempered-fundamental-groups-lean4341.patch",
+      "sha256": "f2e51b5f38459f11515c21801c92c39de85a8feb5f2b490ebbe07a93511a8860",
+      "bytes": 11824,
+      "exact_git_blob_match": true
+    }
+  ],
+  "patch_count": 23,
+  "network_used": false,
+  "compiler_started": false,
+  "scope": "The retained patch files are exact files from the Apache-2.0-licensed pinned OpenAI repository. Unused upstream package source trees are not vendored; no license is assigned to those fetched-only repositories."
+}

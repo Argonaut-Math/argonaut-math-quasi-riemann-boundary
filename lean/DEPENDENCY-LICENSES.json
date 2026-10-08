@@ -1,0 +1,485 @@
+[
+  {
+    "dependency": "mathlib",
+    "url": "https://github.com/leanprover-community/mathlib4.git",
+    "revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "license_notice_archive_paths": [
+      "dependencies/mathlib/LICENSE"
+    ],
+    "standalone_license_in_snapshot": true,
+    "compiled_modules": 8530,
+    "proof_sources_vendored": true,
+    "authorship_source_headers_preserved": true,
+    "license_status": "PRESERVED_STANDALONE_LICENSE"
+  },
+  {
+    "dependency": "checkdecls",
+    "url": "https://github.com/PatrickMassot/checkdecls.git",
+    "revision": "3d425859e73fcfbef85b9638c2a91708ef4a22d4",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "doc-gen4",
+    "url": "https://github.com/leanprover/doc-gen4.git",
+    "revision": "953c8992d174b4e56955e01e101d46668c68f2bb",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "PrimeCert",
+    "url": "https://github.com/b-mehta/PrimeCert.git",
+    "revision": "0803c2f6bd289c09704c7d352bb8fcf770cbb9b2",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "LeanArchitect",
+    "url": "https://github.com/hanwenzhu/LeanArchitect.git",
+    "revision": "468e8f58fb4ad6e6ad672a08da6d0d0531e95a97",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "leancert",
+    "url": "https://github.com/alerad/leancert.git",
+    "revision": "7f91b6eb3567437f6cfac03ed279706603ee22f4",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "PrimeNumberTheoremAnd",
+    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git",
+    "revision": "c39a751132c88b6e8080b74c74023fd95b3d8be0",
+    "license_notice_archive_paths": [
+      "dependencies/PrimeNumberTheoremAnd/LICENSE",
+      "dependencies/PrimeNumberTheoremAnd/PrimeNumberTheoremAnd/SiegelZeros/NOTICE.md"
+    ],
+    "standalone_license_in_snapshot": true,
+    "compiled_modules": 4,
+    "proof_sources_vendored": true,
+    "authorship_source_headers_preserved": true,
+    "license_status": "PRESERVED_STANDALONE_LICENSE"
+  },
+  {
+    "dependency": "belyi",
+    "url": "https://github.com/lana-agents/belyi.git",
+    "revision": "9ce4d3f793d3bc831f2fc7214b7dbad90ea012d8",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "formal-schemes",
+    "url": "https://github.com/lana-agents/formal-schemes.git",
+    "revision": "51aa935079537bf4dc580751a6e70727fb23ca93",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "elliptic-curves",
+    "url": "https://github.com/lana-agents/elliptic-curves.git",
+    "revision": "bebec3fc9f2602e81c83e5236789572a541c85fb",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "tempered-fundamental-groups",
+    "url": "https://github.com/lana-agents/tempered-fundamental-groups.git",
+    "revision": "2006651f52b70ea2fe3388238c7d9db14d21748f",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "oka",
+    "url": "https://github.com/lana-agents/oka.git",
+    "revision": "75dcdc3faadd10b986afb9283e89902bcdddecd4",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "orbicurve-cores",
+    "url": "https://github.com/lana-agents/orbicurve-cores.git",
+    "revision": "61616dcd77fbe45c083a8ebfa7cc80728f86e841",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "pi1",
+    "url": "https://github.com/lana-agents/pi1.git",
+    "revision": "ca7def953193f861a462aa0831eec8f0a31ff69f",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "heights",
+    "url": "https://github.com/lana-agents/heights.git",
+    "revision": "721496ca4c158e511d25d8ccf6bfe8503eda73c1",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "genl",
+    "url": "https://github.com/lana-agents/genl.git",
+    "revision": "ea2846c877d1e16d8f0b911a5fed07f5ee69eaaf",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "tate-curves-theta",
+    "url": "https://github.com/lana-agents/tate-curves-theta.git",
+    "revision": "ca6c2279d3cea0690cdb01328e727118d5485d68",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "iut",
+    "url": "https://github.com/lana-agents/iut.git",
+    "revision": "d9465c111ec4073709f67e9fccec7e3eb374a816",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "gromov",
+    "url": "https://github.com/Aaron1011/gromov.git",
+    "revision": "8db79f13cf211b570e3116301d91379fbc01cf3e",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "TauCeti",
+    "url": "https://github.com/TauCetiProject/TauCeti.git",
+    "revision": "3bed7e37f3c504a99e8c07e9f309540812a7aa90",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "SphereEversion",
+    "url": "https://github.com/leanprover-community/sphere-eversion.git",
+    "revision": "9c53f91e2a281199163ecea04dc4976cb79e2076",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "schoenflies-lean",
+    "url": "https://github.com/alonamaloh/schoenflies-lean",
+    "revision": "05a43d29cde026618777db3d4e4316204ccca237",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "ClassFieldTheory",
+    "url": "https://github.com/n-yamaguchi-0729/ClassFieldTheory.git",
+    "revision": "2eb22d6485af45f29c5219de6c49f196a61c4f49",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "AINTLIB",
+    "url": "https://github.com/CBirkbeck/AINTLIB.git",
+    "revision": "160e446617a2168c34c95bbe7a76c4105b392434",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "AbsorptionCutoff",
+    "url": "https://github.com/BennyAvelin/AbsorptionCutoff.git",
+    "revision": "41c45c6d72e979419e46224bb7b4be5cee31f2b5",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "StrongPNT",
+    "url": "https://github.com/math-inc/strongpnt.git",
+    "revision": "2f5835c322314f55f1026ec2f139d704b7c45c69",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "carleson",
+    "url": "https://github.com/fpvandoorn/carleson.git",
+    "revision": "306ae5b29300771aece1aa39f0a939183cc59486",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "rellich-kondrachov",
+    "url": "https://github.com/abenenson/rellich-kondrachov.git",
+    "revision": "70f85d4c1bf99c6e7d61e8be4daa6f3664d08d23",
+    "license_notice_archive_paths": [
+      "dependencies/rellich-kondrachov/LICENSE"
+    ],
+    "standalone_license_in_snapshot": true,
+    "compiled_modules": 15,
+    "proof_sources_vendored": true,
+    "authorship_source_headers_preserved": true,
+    "license_status": "PRESERVED_STANDALONE_LICENSE"
+  },
+  {
+    "dependency": "Zeta3Irrational",
+    "url": "https://github.com/ahhwuhu/zeta_3_irrational.git",
+    "revision": "e8785315a01c8fbcddaa0fc03b3c8b29a61bc1f1",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "fixed-point-theorems",
+    "url": "https://github.com/harfe/fixed-point-theorems-lean4.git",
+    "revision": "770940ddf9878cf61952ed53d910b92bca841838",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "plausible",
+    "url": "https://github.com/leanprover-community/plausible",
+    "revision": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+    "license_notice_archive_paths": [
+      "dependencies/plausible/LICENSE"
+    ],
+    "standalone_license_in_snapshot": true,
+    "compiled_modules": 13,
+    "proof_sources_vendored": true,
+    "authorship_source_headers_preserved": true,
+    "license_status": "PRESERVED_STANDALONE_LICENSE"
+  },
+  {
+    "dependency": "LeanSearchClient",
+    "url": "https://github.com/leanprover-community/LeanSearchClient",
+    "revision": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+    "license_notice_archive_paths": [
+      "dependencies/LeanSearchClient/LICENSE"
+    ],
+    "standalone_license_in_snapshot": true,
+    "compiled_modules": 4,
+    "proof_sources_vendored": true,
+    "authorship_source_headers_preserved": true,
+    "license_status": "PRESERVED_STANDALONE_LICENSE"
+  },
+  {
+    "dependency": "importGraph",
+    "url": "https://github.com/leanprover-community/import-graph",
+    "revision": "e928b72544873815af278d38681b31c0293588e3",
+    "license_notice_archive_paths": [
+      "dependencies/importGraph/LICENSE"
+    ],
+    "standalone_license_in_snapshot": true,
+    "compiled_modules": 10,
+    "proof_sources_vendored": true,
+    "authorship_source_headers_preserved": true,
+    "license_status": "PRESERVED_STANDALONE_LICENSE"
+  },
+  {
+    "dependency": "proofwidgets",
+    "url": "https://github.com/leanprover-community/ProofWidgets4",
+    "revision": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+    "license_notice_archive_paths": [
+      "dependencies/proofwidgets/LICENSE"
+    ],
+    "standalone_license_in_snapshot": true,
+    "compiled_modules": 13,
+    "proof_sources_vendored": true,
+    "authorship_source_headers_preserved": true,
+    "license_status": "PRESERVED_STANDALONE_LICENSE"
+  },
+  {
+    "dependency": "aesop",
+    "url": "https://github.com/leanprover-community/aesop",
+    "revision": "355695d523e41d0554926416cba2a2b3544fbbc9",
+    "license_notice_archive_paths": [
+      "dependencies/aesop/LICENSE"
+    ],
+    "standalone_license_in_snapshot": true,
+    "compiled_modules": 132,
+    "proof_sources_vendored": true,
+    "authorship_source_headers_preserved": true,
+    "license_status": "PRESERVED_STANDALONE_LICENSE"
+  },
+  {
+    "dependency": "Qq",
+    "url": "https://github.com/leanprover-community/quote4",
+    "revision": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+    "license_notice_archive_paths": [
+      "dependencies/Qq/LICENSE"
+    ],
+    "standalone_license_in_snapshot": true,
+    "compiled_modules": 14,
+    "proof_sources_vendored": true,
+    "authorship_source_headers_preserved": true,
+    "license_status": "PRESERVED_STANDALONE_LICENSE"
+  },
+  {
+    "dependency": "batteries",
+    "url": "https://github.com/leanprover-community/batteries",
+    "revision": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+    "license_notice_archive_paths": [
+      "dependencies/batteries/LICENSE"
+    ],
+    "standalone_license_in_snapshot": true,
+    "compiled_modules": 192,
+    "proof_sources_vendored": true,
+    "authorship_source_headers_preserved": true,
+    "license_status": "PRESERVED_STANDALONE_LICENSE"
+  },
+  {
+    "dependency": "leansqlite",
+    "url": "https://github.com/leanprover/leansqlite",
+    "revision": "f9cdb9eacb5c8b8ecc02ee9fd9e568d7d28c1416",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "Cli",
+    "url": "https://github.com/leanprover/lean4-cli",
+    "revision": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "UnicodeBasic",
+    "url": "https://github.com/fgdorais/lean4-unicode-basic",
+    "revision": "0e569d08b6443ce0908d356884c765397253e2f0",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "BibtexQuery",
+    "url": "https://github.com/dupuisf/BibtexQuery",
+    "revision": "4d8616fd4870d0a3453d845770833eac7951fe1c",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  },
+  {
+    "dependency": "MD4Lean",
+    "url": "https://github.com/acmepjz/md4lean",
+    "revision": "31907cc18f48a95384f99cee5582c00fb39e0f67",
+    "license_notice_archive_paths": [],
+    "standalone_license_in_snapshot": false,
+    "compiled_modules": 0,
+    "proof_sources_vendored": false,
+    "authorship_source_headers_preserved": true,
+    "license_status": "FETCHED_ONLY_NOT_VENDORED"
+  }
+]
