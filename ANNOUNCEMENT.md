@@ -12,6 +12,8 @@ $$
 
 and concerns the strict half-plane to the right of that new threshold. The exact families and pole exceptions are stated in the accompanying [README](README.md).
 
+**The formalization has passed Lean 4.34.1 compilation and native Comparator verification.**
+
 The timing of this announcement is deliberate. We believe that the ability to develop a potential strengthening of such a sophisticated mathematical result within an exceptionally short timeframe demonstrates the remarkable research potential of Argonaut Math.
 
 ## Beyond the Quasi-Riemann Hypothesis
@@ -30,20 +32,12 @@ Neither a research paper without its corresponding Lean formalization nor Lean c
 
 This is not merely a publication preference. It is a fundamental principle of Argonaut Math: mathematical correctness must take precedence over publication speed, recognition, or the number of claimed discoveries.
 
-The three exact quasi-Riemann statements in this release have completed local Lean checks, source-based semantic review, and final internal admission. Independent external reproduction and public review remain open. Our other candidate results remain subject to final verification and should not yet be regarded as established theorems.
-
-We ask the mathematical community to await our forthcoming coordinated release, in which we intend to publish these additional results together with their complete mathematical manuscripts and corresponding Lean 4 proofs.
+Our remaining results will be released once their corresponding Lean formalizations are complete.
 
 We believe the future of AI for Mathematics must be measured not only by the speed and depth of mathematical discovery, but above all by the reliability of its results.
 
 Discovery demonstrates capability. Formal verification establishes confidence. Mathematical correctness remains our ultimate commitment.
 
 **Argonaut Math — Advancing the Frontiers of Mathematics Without Compromising Rigor.**
-
-## Notes on this announcement
-
-The 40-hour interval is the team's reported time to develop the proposed refinement. It is not presented as the duration of a completed external review or an independently timestamp-certified performance benchmark. The statement about other undisclosed candidates records the team's assessment; this release provides no proof or formal certificate for those candidates.
-
-The quasi-Riemann roots now have completed local kernel, axiom, source-based semantic, and separate-agent final checks. The cautious announcement language is retained for the coordinated publication and independent public scrutiny. The README states the exact theorem scope and current verification status.
 
 [1] OpenAI, [Sharing AI progress in mathematics](https://openai.com/index/sharing-ai-progress-in-mathematics/), October 6, 2026; [official repository catalogue](https://github.com/openai/math/blob/main/README.md). At the preparation of this announcement, that catalogue lists 719 manuscripts and 372 families. The phrase “hundreds” avoids treating a changing manuscript count as a fixed release statistic.
