@@ -4,7 +4,7 @@
 
 Within just **40 hours** of OpenAI's announcement, according to the Argonaut Math team's development timeline, Argonaut Math developed a proposed improvement to OpenAI's Quasi-Riemann Hypothesis result.
 
-On October 6, 2026, OpenAI unveiled hundreds of mathematical manuscripts spanning 372 result families, marking a remarkable milestone in AI-assisted mathematical research.[1]
+On October 6, 2026, OpenAI unveiled hundreds of mathematical manuscripts spanning 372 result families, marking a remarkable milestone in AI-assisted mathematical research.[^1]
 
 The proposed refinement lowers the zero-free threshold from 7/8 to
 
@@ -42,4 +42,4 @@ Discovery demonstrates capability. Formal verification establishes confidence. M
 
 **Argonaut Math — Advancing the Frontiers of Mathematics Without Compromising Rigor.**
 
-[1] OpenAI, [Sharing AI progress in mathematics](https://openai.com/index/sharing-ai-progress-in-mathematics/), October 6, 2026; [official repository catalogue](https://github.com/openai/math/blob/main/README.md). At the preparation of this announcement, that catalogue lists 719 manuscripts and 372 families. The phrase “hundreds” avoids treating a changing manuscript count as a fixed release statistic.
+[^1]: OpenAI, [Sharing AI progress in mathematics](https://openai.com/index/sharing-ai-progress-in-mathematics/), October 6, 2026; [official repository catalogue](https://github.com/openai/math/blob/main/README.md). At the preparation of this announcement, that catalogue lists 719 manuscripts and 372 families. The phrase “hundreds” avoids treating a changing manuscript count as a fixed release statistic.
