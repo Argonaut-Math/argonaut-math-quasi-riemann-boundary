@@ -1,0 +1,225 @@
+name: Comparator - Exact Three Improved Roots
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  comparator:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    env:
+      LEAN_NUM_THREADS: '2'
+    steps:
+      - name: Install the pinned Lean 4.34.1 runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verification
+          cd verification
+          curl --fail --location --retry 3 -o lean.tar.zst https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst
+          echo '47bf4bbd78f70c2e9670598ab7124d92b6efb7330ff33e5fbb4030f6fd72e4e4  lean.tar.zst' | sha256sum --check
+          tar --zstd -xf lean.tar.zst
+          echo "$PWD/lean-4.34.1-linux/bin" >> "$GITHUB_PATH"
+          uname -a > environment.txt
+          id >> environment.txt
+
+      - name: Write the trusted challenge and restore the public proof source
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd verification
+          lean --version | tee -a environment.txt
+          cat > ArgonautBoundaryChallenge.lean <<'LEAN'
+          import OAI.NumberTheory.DirichletL.Hecke.IdealBridge
+          import Mathlib.NumberTheory.LSeries.DirichletContinuation
+          import Mathlib.NumberTheory.LSeries.RiemannZeta
+          
+          namespace OAI
+          noncomputable section
+          
+          namespace DirichletCharacter
+          theorem LFunction_ne_zero_of_perturbed_boundary_lt_re
+              {q : ℕ} [NeZero q]
+              (chi : _root_.DirichletCharacter ℂ q) {s : ℂ}
+              (hs : (3499999 / 4000000 : ℝ) < s.re)
+              (hpole : ¬ (chi = 1 ∧ s = 1)) :
+              _root_.DirichletCharacter.LFunction chi s ≠ 0 := by
+            sorry
+          end DirichletCharacter
+          
+          theorem riemannZeta_ne_zero_of_perturbed_boundary_lt_re
+              {s : ℂ}
+              (hs : (3499999 / 4000000 : ℝ) < s.re) :
+              riemannZeta s ≠ 0 := by
+            sorry
+          
+          namespace SevenEighths.HeckeFamily
+          theorem LFunction_ne_zero_of_perturbed_boundary_lt_re
+              (chi : Character) {s : ℂ}
+              (hs : (3499999 / 4000000 : ℝ) < s.re)
+              (hpole : ¬ (chi.residue = 1 ∧ s = 1)) :
+              LFunction chi s ≠ 0 := by
+            sorry
+          end SevenEighths.HeckeFamily
+          
+          end
+          end OAI
+          LEAN
+          cat > three-roots.json <<'JSON'
+          {
+            "challenge_module": "ArgonautBoundaryChallenge",
+            "solution_module": "PerturbedBoundaryMain",
+            "theorem_names": [
+              "OAI.DirichletCharacter.LFunction_ne_zero_of_perturbed_boundary_lt_re",
+              "OAI.riemannZeta_ne_zero_of_perturbed_boundary_lt_re",
+              "OAI.SevenEighths.HeckeFamily.LFunction_ne_zero_of_perturbed_boundary_lt_re"
+            ],
+            "definition_names": [],
+            "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+            "enable_nanoda": false
+          }
+          JSON
+          cat > linux-bootstrap.py <<'PY'
+          """Restore the already public, hash-bound proof release in a fresh Linux job."""
+          from pathlib import Path
+          import concurrent.futures, hashlib, json, subprocess, urllib.request, zipfile, io
+          
+          base=Path.cwd()
+          url='https://github.com/ArgonautMath0/argonaut-math-quasi-riemann-boundary/releases/download/v0.1.2/Lean_Proof_Source.zip'
+          with urllib.request.urlopen(url,timeout=120) as response: data=response.read()
+          assert hashlib.sha256(data).hexdigest()=='37602f9379f833c1b9ad3a6c7c628f961670f4219a9ac0f4190f8eb9b7655a93'
+          with zipfile.ZipFile(io.BytesIO(data)) as archive:
+              for name in archive.namelist():
+                  target=(base/name).resolve()
+                  assert target.is_relative_to(base.resolve())
+              archive.extractall(base)
+          packet=base/'Lean_Proof';project=base/'project';project.mkdir()
+          pins=json.loads((packet/'provenance/PINS.json').read_text())
+          assert len(pins['locked_dependencies'])==42
+          assert len({pin['name'] for pin in pins['locked_dependencies']})==42
+          def clone(pin):
+              folder=project/'.lake/packages'/pin['name'];folder.mkdir(parents=True)
+              for args in [['init',str(folder)],['-C',str(folder),'config','core.autocrlf','false'],['-C',str(folder),'remote','add','origin',pin['url']],['-C',str(folder),'fetch','--depth=1','origin',pin['revision']],['-C',str(folder),'checkout','--detach','FETCH_HEAD']]:
+                  subprocess.run(['git',*args],check=True,stdout=subprocess.DEVNULL)
+              actual=subprocess.check_output(['git','-C',str(folder),'rev-parse','HEAD'],text=True).strip()
+              assert actual==pin['revision']
+              return {'name':pin['name'],'revision':actual,'tree':subprocess.check_output(['git','-C',str(folder),'rev-parse','HEAD^{tree}'],text=True).strip()}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+              records=list(pool.map(clone,pins['locked_dependencies']))
+          (base/'dependency-readback.json').write_text(json.dumps(records,indent=2)+'\n')
+          subprocess.run(['python3',str(packet/'reproducibility/reconstruct.py'),'--project',str(project),'--apply-overlay'],check=True)
+          source=project/'lakefile.task18-reviewed-overlay-v1.lean'
+          assert hashlib.sha256(source.read_bytes()).hexdigest()=='73ff8dc783317b26604dcbfa609a347a5069132c3e7b7bc626c0b349c0d54ea1'
+          assert hashlib.sha256((project/'task17-src001-reviewed-v1/PerturbedBoundaryMain.lean').read_bytes()).hexdigest()=='ffdd133750ac3bf57b5de12e474e5451791d625e2fc6e7269755e91760a642b5'
+          (project/'lakefile.lean').write_bytes(source.read_bytes()+b'\nlean_lib ArgonautBoundaryChallenge where\n  srcDir := "comparator-check-v1"\n')
+          (project/'comparator-check-v1').mkdir()
+          (project/'comparator-check-v1/ArgonautBoundaryChallenge.lean').write_bytes((base/'ArgonautBoundaryChallenge.lean').read_bytes())
+          (project/'three-roots.json').write_bytes((base/'three-roots.json').read_bytes())
+          print('Exact public source restoration complete.',flush=True)
+          PY
+          python3 linux-bootstrap.py
+
+      - name: Build pinned official Comparator, exporter, and real landrun
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd verification
+          mkdir tools
+          git init tools/comparator
+          git -C tools/comparator remote add origin https://github.com/leanprover/comparator.git
+          git -C tools/comparator fetch --depth=1 origin d03acab154d269c06e60e4de7e4cc85deebff94b
+          git -C tools/comparator checkout --detach FETCH_HEAD
+          git init tools/lean4export
+          git -C tools/lean4export remote add origin https://github.com/leanprover/lean4export.git
+          git -C tools/lean4export fetch --depth=1 origin 076e8e57707e813375e8f9da8bf989799ace9680
+          git -C tools/lean4export checkout --detach FETCH_HEAD
+          printf 'leanprover/lean4:v4.34.1\n' > tools/comparator/lean-toolchain
+          printf 'leanprover/lean4:v4.34.1\n' > tools/lean4export/lean-toolchain
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('tools/comparator/lakefile.toml')
+          text=p.read_text()
+          marker='[[require]]'
+          assert text.count(marker)==1
+          p.write_text(text.split(marker)[0]+'[[require]]\nname = "lean4export"\npath = "../lean4export"\n')
+          PY
+          (cd tools/comparator && lake update && lake build comparator lean4export) 2>&1 | tee tool-build.log
+          git init tools/landrun
+          git -C tools/landrun remote add origin https://github.com/Zouuup/landrun.git
+          git -C tools/landrun fetch --depth=1 origin 811cfff51ceaf3d9843708aa6d22e9b84ccac8b4
+          git -C tools/landrun checkout --detach FETCH_HEAD
+          (cd tools/landrun && go build -o landrun ./cmd/landrun)
+          python3 - <<'PY'
+          import ctypes, json
+          c=ctypes.CDLL(None,use_errno=True)
+          abi=c.syscall(444,None,0,1)
+          print(json.dumps({'landlock_abi':abi}))
+          assert abi>=4, 'A functional Landlock ABI with TCP restrictions is required'
+          PY
+          tools/landrun/landrun --best-effort --ro / --rox /usr --rw /dev -- /usr/bin/true
+          if tools/landrun/landrun --best-effort --ro / --rox /usr --rw /dev -- /usr/bin/touch "$PWD/sandbox-write-must-fail"; then
+            echo 'Filesystem sandbox did not enforce the required restriction' >&2
+            exit 1
+          fi
+          test ! -e sandbox-write-must-fail
+          sha256sum tools/comparator/.lake/build/bin/comparator tools/lean4export/.lake/build/bin/lean4export tools/landrun/landrun > tool-binary-hashes.txt
+          git -C tools/comparator diff > comparator-metadata-only.patch
+          git -C tools/lean4export diff > exporter-metadata-only.patch
+
+      - name: Obtain trusted Mathlib compilation cache if available
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd verification/project
+          lake exe cache get 2>&1 | tee ../mathlib-cache.log
+
+      - name: Run the official sandboxed Comparator for all three exact roots
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd verification/project
+          comparator="$PWD/../tools/comparator/.lake/build/bin/comparator"
+          exporter="$PWD/../tools/lean4export/.lake/build/bin/lean4export"
+          landrun="$PWD/../tools/landrun/landrun"
+          cat > ../service-guard.py <<'PY'
+          import os, socket, errno, json
+          assert os.getuid()!=0
+          try:
+              socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+          except OSError as error:
+              assert error.errno==errno.EAFNOSUPPORT
+          else:
+              raise RuntimeError('AF_UNIX guard did not enforce its restriction')
+          print(json.dumps({'uid':os.getuid(),'af_unix_guard':'ENFORCED'}),flush=True)
+          PY
+          cat /proc/meminfo > ../memory-environment.txt
+          df -h >> ../memory-environment.txt
+          sha256sum task17-src001-reviewed-v1/PerturbedBoundaryMain.lean comparator-check-v1/ArgonautBoundaryChallenge.lean three-roots.json lakefile.lean > ../input-hashes-before.txt
+          set +e
+          sudo systemd-run --wait --pipe --unit=argonaut-comparator-${GITHUB_RUN_ID} --property=User=runner --property=NoNewPrivileges=yes --property='RestrictAddressFamilies=~AF_UNIX' --property=MemoryMax=14G --property=MemorySwapMax=0 --property=RuntimeMaxSec=18000 --property=KillMode=control-group --property="ExecStartPre=/usr/bin/python3 $PWD/../service-guard.py" --working-directory="$PWD" -E PATH="$PATH" -E HOME="$HOME" -E LEAN_NUM_THREADS=2 -E COMPARATOR_LANDRUN="$landrun" -E COMPARATOR_LEAN4EXPORT="$exporter" -- "$(command -v lake)" env "$comparator" three-roots.json 2>&1 | tee ../comparator.log
+          result=${PIPESTATUS[0]}
+          set -e
+          sudo systemctl show argonaut-comparator-${GITHUB_RUN_ID}.service -p User -p RestrictAddressFamilies -p MemoryMax -p MemoryPeak -p MemorySwapMax -p RuntimeMaxUSec -p Result -p ExecMainCode -p ExecMainStatus > ../service-result.txt
+          printf '%s\n' "$result" > ../comparator-exit-code.txt
+          sha256sum task17-src001-reviewed-v1/PerturbedBoundaryMain.lean comparator-check-v1/ArgonautBoundaryChallenge.lean three-roots.json lakefile.lean > ../input-hashes-after.txt
+          cmp ../input-hashes-before.txt ../input-hashes-after.txt
+          test "$result" -eq 0
+          grep -F 'Your solution is okay!' ../comparator.log
+          echo 'Official sandboxed Comparator: PASS for the listed three exact roots.' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Preserve the actual verification evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: comparator-evidence-${{ github.run_id }}
+          retention-days: 30
+          path: |
+            verification/*.txt
+            verification/*.log
+            verification/*.json
+            verification/*.patch
+            verification/ArgonautBoundaryChallenge.lean
+            verification/linux-bootstrap.py
