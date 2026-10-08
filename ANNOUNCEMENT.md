@@ -1,32 +1,4 @@
-# Argonaut Math: A Refinement of the Quasi-Riemann Boundary
-
-**Research release candidate — October 8, 2026**
-
-Argonaut Math refines the zero-free boundary in OpenAI's quasi-Riemann result from **7/8 = 0.875** to **3499999/4000000 = 0.87499975**, an improvement of **1/4000000**. The conclusion concerns the strict half-plane **Re(s) > 3499999/4000000**.
-
-- [English paper](https://github.com/ArgonautMath0/argonaut-math-quasi-riemann-boundary/releases/download/v0.1.0/Compensation_Primes_and_a_Refinement_of_the_Quasi_Riemann_Boundary.pdf)
-- [Corresponding Lean 4 sources](https://github.com/ArgonautMath0/argonaut-math-quasi-riemann-boundary/releases/download/v0.1.0/Lean_Proof_Source.zip)
-- [Research announcement](ANNOUNCEMENT.md)
-
-## The result
-
-The three public Lean statements establish nonvanishing in that half-plane for the Riemann zeta function, all complex Dirichlet characters of positive modulus, and finite-order Hecke characters with trivial infinity type over the fixed field Q(sqrt(-3)). Primitive and imprimitive characters are included. Principal-character poles at s = 1 are excluded. The zeta statement uses Mathlib's assigned nonzero value at 1; the classical meromorphic formulation retains its pole. The boundary line is not included.
-
-The proof builds on the pinned [OpenAI source project](https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a). The public roots require no externally supplied analytic estimate. Local kernel, standard-axiom and source-based semantic checks are complete for these three exact statements. External reproduction and public review remain open. The paper predates completion of the final formal checks; its historical AI Closure note is supplemented by this current status.
-
-## Check the proof
-
-Unpack `Lean_Proof_Source.zip` and follow the included `Lean_Proof/BUILD.md`. It specifies Lean 4.34.1, exact dependency revisions, source restoration and the build/audit commands. Checking the proof does not require our plugin or a model call.
-
-The package contains generated mathematical proof sources and generic verification tools. Plugin implementation, private prompts, orchestration settings, private review records and credentials are not published. Upstream licenses and notices are retained.
-
-Prepared by **Argonaut Math** through human-guided AI research and the AI for Math workflow. This release pairs the paper with its corresponding Lean sources.
-
-Contact: [argonautmath0@gmail.com](mailto:argonautmath0@gmail.com).
-
----
-
-## Argonaut Math — Research Breakthrough Announcement
+# Argonaut Math — Research Breakthrough Announcement
 
 **October 8, 2026**
 
@@ -42,7 +14,7 @@ and concerns the strict half-plane to the right of that new threshold. The exact
 
 The timing of this announcement is deliberate. We believe that the ability to develop a potential strengthening of such a sophisticated mathematical result within an exceptionally short timeframe demonstrates the remarkable research potential of Argonaut Math.
 
-### Beyond the Quasi-Riemann Hypothesis
+## Beyond the Quasi-Riemann Hypothesis
 
 Argonaut Math has also produced what we believe to be solutions to several other highly advanced, frontier-level mathematical problems.
 
@@ -68,7 +40,7 @@ Discovery demonstrates capability. Formal verification establishes confidence. M
 
 **Argonaut Math — Advancing the Frontiers of Mathematics Without Compromising Rigor.**
 
-### Notes on this announcement
+## Notes on this announcement
 
 The 40-hour interval is the team's reported time to develop the proposed refinement. It is not presented as the duration of a completed external review or an independently timestamp-certified performance benchmark. The statement about other undisclosed candidates records the team's assessment; this release provides no proof or formal certificate for those candidates.
 
