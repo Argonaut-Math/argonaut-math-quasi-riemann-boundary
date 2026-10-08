@@ -2,17 +2,23 @@
 
 **Research release candidate — October 8, 2026**
 
+**Authors (in order): [ArgonautMath0](https://github.com/ArgonautMath0) · [argonautmathassistant-jpg](https://github.com/argonautmathassistant-jpg).**
+
 Argonaut Math refines the zero-free boundary in OpenAI's quasi-Riemann result from **7/8 = 0.875** to **3499999/4000000 = 0.87499975**, an improvement of **1/4000000**. The conclusion concerns the strict half-plane **Re(s) > 3499999/4000000**.
 
-- [English paper](https://github.com/ArgonautMath0/argonaut-math-quasi-riemann-boundary/releases/download/v0.1.2/Beyond_the_Seven_Eighths_Barrier.pdf)
-- [Corresponding Lean 4 sources](https://github.com/ArgonautMath0/argonaut-math-quasi-riemann-boundary/releases/download/v0.1.2/Lean_Proof_Source.zip)
+- [English paper](preprints/Beyond_the_Seven_Eighths_Barrier.pdf)
+- [LaTeX source](preprints/Beyond_the_Seven_Eighths_Barrier.tex)
+- [Corresponding Lean 4 sources](https://github.com/Argonaut-Math/argonaut-math-quasi-riemann-boundary/releases/download/v0.1.3/Lean_Proof_Source.zip)
+- [Lean proof entry and build guide](lean/README.md)
+- [Verification records](reasoning_traces/README.md)
+- [Contents](CONTENTS.md)
 - [Research announcement](ANNOUNCEMENT.md)
 
 ## The result
 
 The three public Lean statements establish nonvanishing in that half-plane for the Riemann zeta function, all complex Dirichlet characters of positive modulus, and finite-order Hecke characters with trivial infinity type over the fixed field Q(sqrt(-3)). Primitive and imprimitive characters are included. Principal-character poles at s = 1 are excluded. The zeta statement uses Mathlib's assigned nonzero value at 1; the classical meromorphic formulation retains its pole. The boundary line is not included.
 
-The proof builds on the pinned [OpenAI source project](https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a). The public roots require no externally supplied analytic estimate. Local kernel, standard-axiom and source-based semantic checks are complete for these three exact statements. External reproduction and public review remain open. The paper predates completion of the final formal checks; its historical AI Closure note is supplemented by this current status.
+The proof builds on the pinned [OpenAI source project](https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a). The public roots require no externally supplied analytic estimate. Local kernel, standard-axiom and source-based semantic checks are complete for these three exact statements. External reproduction and public review remain open. The revised paper records these completed Lean checks and the native Comparator core PASS. The separate Linux sandbox workflow is still in progress; its live result is available under Actions.
 
 ## Check the proof
 
