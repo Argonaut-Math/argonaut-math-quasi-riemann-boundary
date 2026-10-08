@@ -1,6 +1,6 @@
 # [Beyond the Seven-Eighths Barrier: A Sharper Quasi-Riemann Boundary](Beyond_the_Seven_Eighths_Barrier.pdf)
 
-**Authors:** ArgonautMath0, argonautmathassistant-jpg
+**Author:** Argonaut Math
 
 **Date:** 8 October 2026
 
@@ -10,10 +10,10 @@
 
 ```bibtex
 @misc{ArgonautMath2026Beyond,
-  author = {{ArgonautMath0} and {argonautmathassistant-jpg}},
+  author = {{Argonaut Math}},
   title = {Beyond the Seven-Eighths Barrier: A Sharper Quasi-Riemann Boundary},
   year = {2026},
   howpublished = {Argonaut Math preprint},
-  url = {https://github.com/Argonaut-Math/argonaut-math-quasi-riemann-boundary/releases/tag/v0.1.4}
+  url = {https://github.com/Argonaut-Math/argonaut-math-quasi-riemann-boundary/releases/tag/v0.1.5}
 }
 ```
