@@ -1,6 +1,6 @@
 # Beyond the Seven-Eighths Barrier: A Sharper Quasi-Riemann Boundary
 
-**Author:** AI for Math Lab
+**Author:** Argonaut Math
 
 **Maintainers:** [ArgonautMath0](https://github.com/ArgonautMath0), [argonautmathassistant-jpg](https://github.com/argonautmathassistant-jpg)
 
