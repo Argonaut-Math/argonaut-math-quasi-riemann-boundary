@@ -4,8 +4,8 @@
 
 Argonaut Math refines the zero-free boundary in OpenAI's quasi-Riemann result from **7/8 = 0.875** to **3499999/4000000 = 0.87499975**, an improvement of **1/4000000**. The conclusion concerns the strict half-plane **Re(s) > 3499999/4000000**.
 
-- [English paper](https://github.com/ArgonautMath0/argonaut-math-quasi-riemann-boundary/releases/download/v0.1.0/Compensation_Primes_and_a_Refinement_of_the_Quasi_Riemann_Boundary.pdf)
-- [Corresponding Lean 4 sources](https://github.com/ArgonautMath0/argonaut-math-quasi-riemann-boundary/releases/download/v0.1.0/Lean_Proof_Source.zip)
+- [English paper](https://github.com/ArgonautMath0/argonaut-math-quasi-riemann-boundary/releases/download/v0.1.1/Compensation_Primes_and_a_Refinement_of_the_Quasi_Riemann_Boundary.pdf)
+- [Corresponding Lean 4 sources](https://github.com/ArgonautMath0/argonaut-math-quasi-riemann-boundary/releases/download/v0.1.1/Lean_Proof_Source.zip)
 - [Research announcement](ANNOUNCEMENT.md)
 
 ## The result
